@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Rajib Jadav</title>
+    <meta name="description" content="Portfolio of Rajib Jadav, a Product Designer focused on creating intuitive digital products.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css" integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">RJ</a>
+            
+            <nav class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="project.html" class="nav-link active">Projects</a>
+            </nav>
+
+            <div class="nav-cta">
+                <a href="#contact" class="btn btn-outline">Contact Now</a>
+                <a href="assets/resume/Rajib-jadav-UI-UX-Designer-resume.pdf" target="_blank" class="btn btn-primary">Resume</a>
+            </div>
+
+            <button class="mobile-menu-toggle" aria-label="Toggle Menu">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Projects List State -->
+        <section id="projects-list" class="projects-section section-padding d-none">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="eyebrow">Projects</span>
+                    <h2 class="section-title">All Projects</h2>
+                    <p class="section-subtitle">Deep dives into selected projects where I solved user problems, simplified complex workflows, and created measurable value through thoughtful product design.</p>
+                </div>
+                
+                <div class="projects-grid" id="dynamic-projects-grid">
+                    <!-- Cards will be injected here dynamically -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Dynamic Project Details State -->
+        <section id="project-details" class="project-detail-section section-padding d-none">
+            <div class="container">
+                <a href="index.html#projects" class="project-link project-back-link">
+                    <i class="ri-arrow-left-line"></i> Back to Projects
+                </a>
+                <div class="section-header text-center project-header-spacing">
+                    <div class="project-tags project-tags-center">
+                        <span class="tag tag-primary" id="project-category"></span>
+                        <span class="tag tag-secondary" id="project-secondary-category"></span>
+                    </div>
+                    <h1 class="section-title" id="project-title"></h1>
+                    <p class="section-subtitle" id="project-desc" style="margin-bottom: 24px;"></p>
+                    <div id="project-date" class="project-date-meta"></div>
+                </div>
+                
+                <div class="project-detail-gallery" id="project-gallery">
+                    <!-- Dynamic images injected here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Not Found State -->
+        <section id="project-not-found" class="hello-section section-padding d-none">
+            <div class="container hello-container">
+                <div class="hello-content">
+                    <h2 class="hello-title">Project Not Found</h2>
+                    <p class="hello-desc" style="margin-bottom: 32px;">The project you are looking for doesn't exist or has been moved.</p>
+                    <a href="project.html" class="btn btn-outline-primary">
+                        Back to Projects
+                        <i class="ri-arrow-right-up-line icon-arrow"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-left">
+                <div class="footer-logo">
+                    <span class="logo-box">RJ</span>
+                    <span class="thank-you">Thank you for visiting.</span>
+                </div>
+            </div>
+            <div class="footer-right">
+                <nav class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="project.html">Project</a>
+                    <a href="assets/resume/Rajib-jadav-UI-UX-Designer-resume.pdf" target="_blank">Resume</a>
+                </nav>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p class="copyright">&copy; 2026 Rajib. All Rights Reserved.</p>
+            <div class="social-links">
+                <a href="#" aria-label="LinkedIn"><i class="ri-linkedin-fill" style="font-size: 20px;"></i></a>
+                <a href="#" aria-label="Dribbble"><i class="ri-dribbble-line" style="font-size: 20px;"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top">
+        <i class="ri-arrow-up-line"></i>
+    </button>
+
+    <!-- Contact Modal -->
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Close modal"><i class="ri-close-line"></i></button>
+            <h2 class="modal-title">Get in Touch</h2>
+            <p class="modal-desc">Feel free to reach out through any of the platforms below.</p>
+            <div class="contact-options">
+                <a href="tel:+919674651514" class="contact-option">
+                    <div class="contact-icon"><i class="ri-phone-line"></i></div>
+                    <div class="contact-info">
+                        <span class="contact-label">Call Me</span>
+                        <span class="contact-value">9674651514</span>
+                    </div>
+                </a>
+                <a href="mailto:rajiby305@gmail.com" class="contact-option">
+                    <div class="contact-icon"><i class="ri-mail-line"></i></div>
+                    <div class="contact-info">
+                        <span class="contact-label">Email Me</span>
+                        <span class="contact-value">rajiby305@gmail.com</span>
+                    </div>
+                </a>
+                <a href="https://www.linkedin.com/in/rajib-jadav/" target="_blank" class="contact-option">
+                    <div class="contact-icon"><i class="ri-linkedin-fill"></i></div>
+                    <div class="contact-info">
+                        <span class="contact-label">LinkedIn</span>
+                        <span class="contact-value">Rajib Jadav</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/projects.js"></script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const projectId = urlParams.get('id');
+            
+            const listSection = document.getElementById('projects-list');
+            const detailsSection = document.getElementById('project-details');
+            const notFoundSection = document.getElementById('project-not-found');
+            
+            if (!projectId) {
+                listSection.classList.remove('d-none');
+                
+                // Populate the grid dynamically
+                const grid = document.getElementById('dynamic-projects-grid');
+                grid.innerHTML = ''; // Clear just in case
+                
+                projectsData.forEach(p => {
+                    const card = document.createElement('a');
+                    card.href = `project.html?id=${p.id}`;
+                    card.className = 'project-card';
+                    card.innerHTML = `
+                        <div class="project-image-wrapper">
+                            <img src="${p.images[0]}" alt="${p.title}" class="project-image">
+                        </div>
+                        <div class="project-info">
+                            <div class="project-tags">
+                                <span class="tag tag-primary">${p.category}</span>
+                                <span class="tag tag-secondary">${p.secondaryCategory}</span>
+                            </div>
+                            <h3 class="project-title">${p.title}</h3>
+                            <p class="project-desc">${p.description}</p>
+                            <span class="project-link">
+                                View Project
+                                <i class="ri-arrow-right-line"></i>
+                            </span>
+                        </div>
+                    `;
+                    grid.appendChild(card);
+                });
+                return;
+            }
+
+            // projectsData is loaded from js/projects.js
+            const project = projectsData.find(p => p.id === projectId);
+            
+            if (project) {
+                document.getElementById('project-title').textContent = project.title;
+                document.getElementById('project-desc').textContent = project.description;
+                document.getElementById('project-category').textContent = project.category;
+                document.getElementById('project-secondary-category').textContent = project.secondaryCategory;
+                document.getElementById('project-date').textContent = project.date;
+                
+                const gallery = document.getElementById('project-gallery');
+                
+                project.images.forEach(imagePath => {
+                    const img = document.createElement('img');
+                    img.src = imagePath;
+                    img.alt = project.title;
+                    img.className = 'project-detail-image';
+                    gallery.appendChild(img);
+                });
+                
+                detailsSection.classList.remove('d-none');
+            } else {
+                notFoundSection.classList.remove('d-none');
+            }
+        });
+    </script>
+</body>
+</html>
