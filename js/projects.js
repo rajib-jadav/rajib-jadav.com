@@ -7,8 +7,8 @@ const projectsData = [
         secondaryCategory: "UI/UX Design",
         date: "September 2026",
         images: [
-            // "assets/hp-image/B2B e-commerce website.png",
-            "assets/B2B-e-commerce-website.project/cover_image.webp",
+            "assets/hp-image/B2B e-commerce website.png",
+            // "assets/B2B-e-commerce-website.project/cover_image.webp",
             "assets/B2B-e-commerce-website.project/summary_image_01.webp",
             "assets/B2B-e-commerce-website.project/tools_image_03.webp",
             "assets/B2B-e-commerce-website.project/component_set_image_04.webp",
@@ -28,8 +28,8 @@ const projectsData = [
         secondaryCategory: "Product Design · UI/UX",
         date: "August 2026",
         images: [
-           // "assets/hp-image/expense-tracker-app.png",
-            "assets/expense-tracker.project/cover.webp",
+            "assets/hp-image/expense-tracker-app.png",
+            // "assets/expense-tracker.project/cover.webp",
             "assets/expense-tracker.project/image_01.webp",
             "assets/expense-tracker.project/image_02.webp",
             "assets/expense-tracker.project/image_03.webp",
@@ -56,8 +56,8 @@ const projectsData = [
         secondaryCategory: "UI/UX Design",
         date: "June 2026",
         images: [
-            // "assets/hp-image/teakay-b2b-website.png",
-            "assets/teakay.project/cover.webp",
+            "assets/hp-image/teakay-b2b-website.png",
+            // "assets/teakay.project/cover.webp",
             "assets/teakay.project/Requirement-image.webp",
             "assets/teakay.project/new-design-system.webp",
             "assets/teakay.project/screen.webp",
@@ -74,8 +74,8 @@ const projectsData = [
         secondaryCategory: "UI/UX Design",
         date: "May 2026",
         images: [
-            // "assets/hp-image/weblink-restaurant-pplication.png",
-            "assets/weblink-restaurant.project/cover.webp",
+            "assets/hp-image/weblink-restaurant-pplication.png",
+            // "assets/weblink-restaurant.project/cover.webp",
             "assets/weblink-restaurant.project/image_01.webp",
             "assets/weblink-restaurant.project/image_02.webp",
             "assets/weblink-restaurant.project/image_03.webp",
