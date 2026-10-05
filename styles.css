@@ -70,15 +70,13 @@ img {
   text-transform: uppercase;
   padding: 6px 12px;
   border-radius: 100px;
-  margin-bottom: 16px;
 }
 
 .section-title {
   font-family: var(--font-mono);
-  font-size: 40px;
+  font-size: 32px;
   font-weight: 600;
   color: var(--text-main);
-  margin-bottom: 16px;
 }
 
 .section-subtitle {
@@ -97,12 +95,13 @@ img {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 12px 24px;
+  padding: clamp(10px, 2vw, 12px) clamp(16px, 4vw, 24px);
   border-radius: 50px;
   font-family: var(--font-sans);
   font-weight: 600;
-  font-size: 15px;
+  font-size: clamp(13px, 3vw, 15px);
   cursor: pointer;
+  white-space: nowrap;
   transition: var(--transition);
 }
 
@@ -132,8 +131,8 @@ img {
   background-color: transparent;
   color: var(--primary-accent-light);
   border: 1px solid var(--border-light);
-  padding: 16px 32px;
-  font-size: 16px;
+  padding: clamp(12px, 2.5vw, 16px) clamp(20px, 5vw, 32px);
+  font-size: clamp(14px, 3.5vw, 16px);
 }
 
 .btn-outline-light:hover {
@@ -145,8 +144,8 @@ img {
   background-color: transparent;
   color: var(--primary-accent);
   border: 1px solid var(--primary-accent);
-  padding: 16px 32px;
-  font-size: 16px;
+  padding: clamp(12px, 2.5vw, 16px) clamp(20px, 5vw, 32px);
+  font-size: clamp(14px, 3.5vw, 16px);
 }
 
 .btn-outline-primary:hover {
@@ -304,7 +303,6 @@ img {
 /* About Section */
 .about-container {
   display: flex;
-  align-items: center;
   gap: 30px;
 }
 
@@ -322,7 +320,6 @@ img {
   gap: 12px;
   font-size: 16px;
   color: var(--text-muted);
-  max-width: 630px;
 }
 
 .about-image-wrapper {
@@ -396,7 +393,7 @@ img {
 }
 
 .project-image-wrapper {
-  height: 365px;
+  height: 100%;
   border-radius: 16px;
   overflow: hidden;
   background-color: #000;
@@ -443,7 +440,7 @@ img {
 
 .project-title {
   font-family: var(--font-mono);
-  font-size: 28px;
+  font-size: 24px;
   font-weight: 600;
   color: var(--text-main);
 }
@@ -691,7 +688,7 @@ img {
   
   .hero-image-wrapper {
     width: 100%;
-    height: 400px;
+    height: 560px;
   }
   
   .about-container {
@@ -753,14 +750,14 @@ img {
   
   .nav-cta.active-menu {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     position: absolute;
-    top: 250px;
+    top: 220px;
     left: 0;
     width: 100%;
     background-color: var(--bg-color);
     padding: 20px;
-    border-bottom: 1px solid var(--border-light);
   }
   
   .hero-title {
@@ -772,12 +769,11 @@ img {
   }
   
   .hero-actions {
-    flex-direction: column;
     width: 100%;
+    flex-direction: row-reverse;
   }
   
   .hero-actions .btn {
-    width: 100%;
     justify-content: center;
   }
   
@@ -819,39 +815,6 @@ img {
   background-color: var(--bg-card);
 }
 
-/* Back to Top Button */
-.back-to-top {
-  position: fixed;
-  bottom: 40px;
-  right: 40px;
-  width: 50px;
-  height: 50px;
-  background-color: var(--primary-accent);
-  color: var(--text-dark);
-  border: none;
-  border-radius: 50%;
-  font-size: 24px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.3s ease;
-  z-index: 1000;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-}
-
-.back-to-top.show {
-  opacity: 1;
-  visibility: visible;
-}
-
-.back-to-top:hover {
-  transform: translateY(-5px);
-  background-color: var(--text-main);
-  color: var(--bg-color);
-}
 
 /* Utilities */
 .d-none { display: none !important; }

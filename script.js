@@ -60,24 +60,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Back to top button logic
-    const backToTopBtn = document.getElementById('backToTop');
-    if (backToTopBtn) {
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 300) {
-                backToTopBtn.classList.add('show');
-            } else {
-                backToTopBtn.classList.remove('show');
-            }
-        });
-        
-        backToTopBtn.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-    }
 
     // Contact Modal logic
     const contactBtns = document.querySelectorAll('a[href="#contact"]');
@@ -103,5 +85,47 @@ document.addEventListener('DOMContentLoaded', () => {
                 contactModal.classList.remove('show');
             }
         });
+    }
+
+    // Counter Animation
+    const counters = document.querySelectorAll('.counter');
+    const animateCounters = () => {
+        counters.forEach(counter => {
+            counter.innerText = '0';
+            const target = +counter.getAttribute('data-target');
+            const duration = 1500; // 1.5 seconds
+            
+            // Calculate step time for smooth counting
+            const stepTime = Math.max(Math.floor(duration / target), 10);
+            const increment = Math.max(Math.ceil(target / (duration / stepTime)), 1);
+            
+            let current = 0;
+            const updateCount = () => {
+                current += increment;
+                if (current > target) {
+                    current = target;
+                }
+                counter.innerText = current;
+                
+                if (current < target) {
+                    setTimeout(updateCount, stepTime);
+                }
+            };
+            updateCount();
+        });
+    }
+
+    const statsObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                animateCounters();
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { root: null, rootMargin: '0px', threshold: 0.5 });
+
+    const statsSection = document.querySelector('.stats-section');
+    if (statsSection && counters.length > 0) {
+        statsObserver.observe(statsSection);
     }
 });
