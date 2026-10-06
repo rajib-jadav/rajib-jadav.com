@@ -27,6 +27,8 @@ const projectsData = [
         category: "App",
         secondaryCategory: "Product Design · UI/UX",
         date: "August 2026",
+        figmaEmbed: '<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://embed.figma.com/proto/IcXjYOFV5keJEMGSJJX40R/expense-tracking-app?node-id=167-1882&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=167%3A1882&embed-host=share" allowfullscreen></iframe>',
+        
         images: [
             "assets/hp-image/expense-tracker-app.png",
             // "assets/expense-tracker.project/cover.webp",
@@ -73,6 +75,7 @@ const projectsData = [
         category: "Web Application",
         secondaryCategory: "UI/UX Design",
         date: "May 2026",
+        figmaEmbed: '<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://embed.figma.com/proto/mhrmysM3Hbfx9f5Ddlqx9h/restuarent?node-id=1-11444&p=f&scaling=scale-down&content-scaling=fixed&page-id=1%3A10934&starting-point-node-id=1%3A11444&embed-host=share" allowfullscreen></iframe>',
         images: [
             "assets/hp-image/weblink-restaurant-pplication.png",
             // "assets/weblink-restaurant.project/cover.webp",

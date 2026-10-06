@@ -57,13 +57,13 @@
                 <a href="index.html#projects" class="project-link project-back-link">
                     <i class="ri-arrow-left-line"></i> Back to Projects
                 </a>
-                <div class="section-header text-center project-header-spacing">
+                <div class="section-header project-header-spacing">
                     <div class="project-tags project-tags-center">
                         <span class="tag tag-primary" id="project-category"></span>
                         <span class="tag tag-secondary" id="project-secondary-category"></span>
                     </div>
                     <h1 class="section-title" id="project-title"></h1>
-                    <p class="section-subtitle" id="project-desc" style="margin-bottom: 24px;"></p>
+                    <p class="section-subtitle" id="project-desc" style="margin-bottom: 24px; text-align: left; max-width: 100%;"></p>
                     <div id="project-date" class="project-date-meta"></div>
                 </div>
                 
@@ -202,7 +202,24 @@
                 
                 const gallery = document.getElementById('project-gallery');
                 
-                project.images.forEach(imagePath => {
+                project.images.forEach((imagePath, index) => {
+                    if (index === project.images.length - 1 && project.figmaEmbed) {
+                        const figmaSection = document.createElement('div');
+                        figmaSection.className = 'figma-prototype-section';
+                        
+                        const figmaTitle = document.createElement('h3');
+                        figmaTitle.className = 'figma-prototype-title';
+                        figmaTitle.textContent = 'Prototype';
+                        
+                        const embedWrapper = document.createElement('div');
+                        embedWrapper.className = 'figma-embed-wrapper';
+                        embedWrapper.innerHTML = project.figmaEmbed;
+                        
+                        figmaSection.appendChild(figmaTitle);
+                        figmaSection.appendChild(embedWrapper);
+                        gallery.appendChild(figmaSection);
+                    }
+                    
                     const img = document.createElement('img');
                     img.src = imagePath;
                     img.alt = project.title;
